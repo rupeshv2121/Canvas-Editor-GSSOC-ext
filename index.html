@@ -66,6 +66,19 @@
             /* Consistent font family */
         }
 
+        .copyright{
+            font-size: 1.1rem;
+        }
+
+        .copyright a{
+            text-decoration: none;
+            color: #445afb;
+        }
+
+        .copyright a:hover{
+            text-decoration: underline;
+        }
+
         @media screen and (max-width: 768px) {
             .visitor-counter {
                 height: 100px;
@@ -105,6 +118,13 @@
             /* Darker background for dark mode */
             box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1),
                 0 2px 4px rgba(255, 255, 255, 0.05);
+        }
+
+        .fa-github, .fa-linkedin{
+            color:white;
+        }
+        .fa-github:hover , .fa-linkedin:hover{
+            color: #ad00c9;
         }
     </style>
     <script>
@@ -509,15 +529,20 @@
                     <button onclick="subscribeNewsletter()" class="subscribe">Subscribe</button>
                 </div>
                 <div class="credit" style="font-size: 0.6rem;">
-                    <p>
+                    <p class="copyright">
                         Created by <a href="https://github.com/vishanurag">ANURAG VISHWAKARMA </a> | All rights reserved
 
                         © <span id="year"></span>
 
                     </p>
                     <div style="margin: 20px;" class="share">
-                        <i class="fab fa-github" style="margin-right: 10px;"></i>
-                        <i class="fab fa-linkedin" style="margin-right: 10px;"></i>
+                        <a href="https://github.com/vishanurag">
+                            <i class="fab fa-github" style="margin-right: 10px; ">
+                            </i>
+                        </a>
+                       
+                        <a href="https://www.linkedin.com/in/anuragvishwakarma/"><i class="fab fa-linkedin" style="margin-right: 10px;"></i></a>
+                        
                         <i class="fab fa-twitter"></i>
                     </div>
                 </div>

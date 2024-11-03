@@ -163,7 +163,8 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #161618;
+  background-color: #fff;
+  color: #000000;
 }
 
 .panels-container {
@@ -242,6 +243,11 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
+.btn.transparent:hover{
+  background-color: white;
+  color: #000000;
+}
+
 .right-panel .image,
 .right-panel .content {
   transform: translateX(800px);
@@ -273,6 +279,11 @@ form.sign-in-form {
 
 .sign-in-form .btn.solid {
   margin-bottom: 20px; 
+}
+
+.sign-in-form .btn.solid:hover{
+  background-color: white;
+  color: #000000;
 }
 
 .container.sign-up-mode .right-panel .image,
