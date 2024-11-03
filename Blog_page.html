@@ -29,6 +29,7 @@
         }
 
         .navbar {
+          height: 2rem;
           backdrop-filter: blur(12px);
           background: rgba(255, 255, 255, 0.15);
           padding: 1rem 2rem;
@@ -43,12 +44,20 @@
           z-index: 1000;
         }
 
+        .logo-link{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+        }
+
         /* Title styling */
         .navbar .title .site-name {
             font-family: 'Poppins', sans-serif; /* Use Google Fonts for custom style */
             font-size: 1.5rem;
             color: #ffffff;
             text-transform: uppercase;
+            margin-right: 13px;
         }
 
         /* Navigation link styling */
@@ -153,7 +162,7 @@
           flex-direction: column; /* Stacks h2 and p vertically */
           align-items: center;
           text-align: center;
-          margin-bottom: 3rem;
+         
         }
 
         .title h2 {
