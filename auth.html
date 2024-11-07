@@ -15,40 +15,26 @@
 
   <body>
     <div class="container">
-      <div class="forms-container">
-        <div class="sign-in-signup">
-          <form
-            action="#"
-            class="sign-in-form"
-            onsubmit="return validateSignInForm()"
-          >
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Password"
-                id="sign-in-password"
-              />
-              <i
-                class="fas fa-eye password-toggle"
-                onclick="togglePassword('sign-in-password', this)"
-              ></i>
-            </div>
-            <div class="login">
-              <input type="submit" value="Login" class="btn solid" />
-            </div>
-            <a
-              href="/forgot_password.html"
-              style="text-decoration: none; color: black"
-            >
-              <p>Forgot Password?</p>
-            </a>
-            <p class="social-text">OR<br />Sign in with social platforms</p>
+        <div class="forms-container">
+            <div class="sign-in-signup">
+                <form action="#" class="sign-in-form"  onsubmit="return validateSignInForm()">
+                    <h2 class="title">Sign in</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="sign-in-password" />
+                        <i class="fas fa-eye password-toggle" onclick="togglePassword('sign-in-password', this)"></i>
+                    </div>
+                    <div class="login">
+                        <input type="submit" value="Login" class="btn solid" />
+                    </div>
+                    <a href="/forgot_password.html" style="text-decoration: none; color: black;">
+                        <p>Forgot Password?</p>
+                    </a>
+                    <p class="social-text">OR<br>Sign in with social platforms</p>
 
             <div class="social-media">
               <button class="social-icon" id="microsoft-icon">
@@ -123,38 +109,48 @@
             onsubmit="return validateForm()"
           >
             <h2 class="title">Sign up</h2>
+                    
+                   <div class="social-media">
+                    <button type="button" class="btn btn-microsoft" onclick=" window.location.href='https://login.microsoftonline.com/' ">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                            alt="Microsoft Logo" style="width: 25px; height: 25px; margin-right: 5px;">
+                    </button>
 
-            <!-- Username Field -->
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input
-                type="text"
-                placeholder="Username"
-                id="username"
-                required
-              />
-            </div>
+                        <button type="button" class="btn btn-google" onclick=" window.location.href='https://accounts.google.com' ">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" 
+                                alt="Google Icon" style="width: 30px; height: 30px; margin-right: 7px;"> 
+                        </button>
 
-            <!-- Email Field -->
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" id="email" required />
-            </div>
+                        <button type="button" class="btn btn-github" onclick=" window.location.href='https://github.com/login' ">
+                            <i class="fa-brands fa-github" style="font-size: 30px; margin-right: 7px; color: #b10aff;"></i> 
+                        </button>
 
-            <!-- Password Field -->
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input
-                type="password"
-                placeholder="Password"
-                id="signup-password"
-                required
-              />
-              <i
-                class="fas fa-eye password-toggle"
-                onclick="togglePassword('signup-password', this)"
-              ></i>
-            </div>
+                    </div>
+                </form>
+                                        
+                </form>
+                
+                <form action="#" class="sign-up-form" onsubmit="return validateForm()">
+                    <h2 class="title">Sign up</h2>
+
+                    <!-- Username Field -->
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" id="username" required />
+                    </div>
+
+                    <!-- Email Field -->
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" id="email" required />
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" id="signup-password" required />
+                        <i class="fas fa-eye password-toggle" onclick="togglePassword('signup-password', this)"></i>
+                    </div>
 
             <!-- Password Strength Bars -->
             <div class="password-strength">
@@ -163,11 +159,12 @@
               <div id="strength-strong"></div>
             </div>
 
-            <input type="submit" class="btn" value="Sign up" />
-          </form>
-          <p id="error-message" style="color: red; display: none"></p>
+                    <input type="submit" class="btn" value="Sign up" />
+                </form>
+                <p id="error-message" style="color: red; display: none;"></p>
+
+            </div>
         </div>
-      </div>
 
       <script>
         function validateForm() {
@@ -279,16 +276,16 @@
         container.classList.remove("sign-in-mode");
       });
 
-      function togglePassword(id, element) {
-        const passwordInput = document.getElementById(id);
-        if (passwordInput.type === "password") {
-          passwordInput.type = "text";
-          element.classList.add("active");
-        } else {
-          passwordInput.type = "password";
-          element.classList.remove("active");
+        function togglePassword(id, element) {
+            const passwordInput = document.getElementById(id);
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                element.classList.add('active');
+            } else {
+                passwordInput.type = 'password';
+                element.classList.remove('active');
+            }
         }
-      }
     </script>
     <script type="module" src="auth.js" defer></script>
 
@@ -299,11 +296,13 @@
     <div class="gtranslate_wrapper"></div>
 
     <script>
-      window.gtranslateSettings = {
-        default_language: "en",
-        detect_browser_language: true,
-        wrapper_selector: ".gtranslate_wrapper",
-      };
+
+        window.gtranslateSettings = {
+            "default_language": "en",
+            "detect_browser_language": true,
+            "wrapper_selector": ".gtranslate_wrapper"
+        }
+
     </script>
 
     <script
